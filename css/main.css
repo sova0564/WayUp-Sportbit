@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: black;
@@ -45,7 +48,7 @@ header {
   max-width: 145px;
 }
 
-.image {
+.hero-image {
   width: 465px;
 }
 
@@ -155,6 +158,20 @@ h2 {
   justify-content: center;
 }
 
+@keyframes rot {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.action-wrap img {
+  animation: 5s linear 0s normal none infinite running rot;
+}
+
 .credits {
   font-size: 15px;
   text-align: center;
@@ -162,4 +179,89 @@ h2 {
 
 .footer {
   padding: 120px 0;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  .wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 51px;
+  }
+  .button {
+    margin: 0 auto;
+  }
+  .action-wrap {
+    flex-direction: column;
+    text-align: center;
+    padding: 101px 144px;
+  }
+  .hero-text h2 {
+    text-align: center;
+  }
+  .action-wrap .intro {
+    margin: 24px auto;
+    width: 371px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+  }
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-container {
+    width: auto;
+  }
+  .action-wrap {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 15px;
+  }
+  .hero-image {
+    width: 100%;
+    display: block;
+  }
+  .hero-text {
+    width: auto;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  .action-wrap img {
+    width: 201px;
+  }
+  .action-wrap {
+    padding: 70px 20px;
+  }
+  .action-wrap .hero-text {
+    width: 100%;
+  }
+  .action-wrap .intro {
+    width: auto;
+  }
+  section {
+    padding-top: 90px;
+  }
+  .footer {
+    padding: 90px 0;
+  }
+  .wrapper {
+    margin-top: 50px;
+  }
 }
